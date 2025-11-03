@@ -1,0 +1,274 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  background: white;
+  min-height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+  padding-left: 5%;
+}
+
+.background-image {
+  position: fixed;
+  inset: 0;
+  width: 1920px;
+  height: 1100px;
+  object-fit: cover;    
+  z-index: -1;          
+  pointer-events: none; 
+}
+
+.text-box {
+  position: absolute;
+  top: 13%;
+  left: 6%;
+  z-index: 3;
+}
+
+.img-title {
+  width: 80px;
+  height: 80px;
+  margin-right: 2px;
+  vertical-align: middle;
+}
+
+.text-box h1 {
+    font-size: 2.8rem;
+    font-weight: 750;
+    margin-bottom: 35px;
+}
+
+.text-box h2 {
+  font-size: 2.8rem;
+  font-weight: 800; 
+  margin-bottom: 0.5rem;
+}
+
+.text-cards {
+  display: flex;
+  gap: 100px; 
+  margin-top: 170px; 
+  margin-left: 10px;
+}
+
+.text-card {
+  padding: 20px 25px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+}
+
+.text-card .line1 {
+  color: #ff55be; 
+  font-size: 60px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.text-card .line2 {
+  color: #ffffff; 
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.image-container {
+  position: absolute;
+  top: -24%;
+  left: 50%;
+  width: 1300px;
+  height: 1600px;
+  display: flex;
+  gap: 40px;
+  transform: rotate(-12deg);
+  padding: 30px;
+  overflow: hidden;
+}
+
+.image-box-down .scroll-content,
+.image-box-up .scroll-content {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;             
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  will-change: transform;
+}
+
+.image-box-down .scroll-content {
+  animation-name: scrollDown;
+  animation-duration: 60s; 
+}
+
+.image-box-up .scroll-content {
+  animation-name: scrollUp;
+  animation-duration: 60s;
+}
+
+
+.scroll-content img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 25px;
+}
+
+@keyframes scrollDown {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); } 
+}
+
+@keyframes scrollUp {
+  0% { transform: translateY(-50%); }
+  100% { transform: translateY(0); }
+}
+
+.cssbuttons-io-button {
+  font-size: 26px;
+  top: 170px;
+  left: 50px;
+  background: #ff59bf;  
+  color: white;
+  font-family: inherit;
+  padding: 0.5em;
+  padding-left: 1.6em;
+  font-size: 20px;     
+  font-weight: 500;
+  border-radius: 1.2em;
+  border: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow:
+    inset 0 0 1.6em -0.6em #ff4ebb,
+    0 18px 30px rgba(0, 0, 0, 0.397),
+    0 12px 18px rgba(0,0,0,0.30);
+  overflow: hidden;
+  position: relative;
+  height: 3.6em;        
+  padding-right: 4.4em; 
+  cursor: pointer;
+  min-width: 220px;     
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.cssbuttons-io-button:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    inset 0 0 1.6em -0.6em #ff59bf,
+    0 25px 48px rgba(0,0,0,0.55),
+    0 3px 18px rgba(0,0,0,0.35);
+}
+
+.cssbuttons-io-button:active {
+  transform: translateY(0);
+  box-shadow:
+    inset 0 0 1.2em -0.6em #ff59bf,
+    0 6px 18px rgba(0,0,0,0.40),
+    0 2px 8px rgba(0,0,0,0.30);
+}
+
+.cssbuttons-io-button .icon {
+  background: white;
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3em;          
+  width: 3em;         
+  border-radius: 0.9em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em #ff43b7; ;
+  right: 0.6em;         
+  transition: all 0.3s;
+}
+
+.cssbuttons-io-button:hover .icon {
+  width: calc(100% - 0.8em);
+}
+
+.cssbuttons-io-button .icon svg {
+  width: 1.4em;         
+  transition: transform 0.3s;
+  color: #ff59bf;
+}
+
+.cssbuttons-io-button:hover .icon svg {
+  transform: translateX(0.2em);
+}
+
+.cssbuttons-io-button:active .icon {
+  transform: scale(0.95);
+}
+
+.Btn {
+  top: 210px;
+  left: -50px;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: .4s;
+  cursor: pointer;
+  position: relative;
+  background-color: rgb(31, 31, 31);
+  overflow: hidden;
+}
+
+.svgIcon {
+  transition-duration: .3s;
+}
+
+.svgIcon path {
+  fill: white;
+}
+
+.text {
+  position: absolute;
+  color: rgb(255, 255, 255);
+  width: 120px;
+  font-weight: 600;
+  opacity: 0;
+  transition-duration: .4s;
+}
+
+.Btn:hover {
+  width: 110px;
+  transition-duration: .4s;
+  border-radius: 30px;
+}
+
+.Btn:hover .text {
+  opacity: 1;
+  transition-duration: .4s;
+}
+
+.Btn:hover .svgIcon {
+  opacity: 0;
+  transition-duration: .3s;
+}
+
+.content {
+  display: none;
+  text-align: center;
+  padding: 30px;
+}
+
+.content.active {
+  display: block;
+}
+
+.content h2 {
+  margin-bottom: 10px;
+}
