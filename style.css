@@ -48,31 +48,31 @@
       gap: 25px;
     }
 
-nav a {
-  text-decoration: none;
-  color: #111;
-  padding: 8px 14px;
-  transition: background-color 0.18s ease, color 0.18s ease, transform 0.08s ease;
-  cursor: pointer;
-  border-radius: 8px;      /* face butonul rotunjit */
-  background: transparent; /* starea implicită */
-  display: inline-block;
-  border: 1px solid transparent;
-  font-weight: 600;
-}
-
-nav a:hover {
-  background: #111;        
-  color: #fff;
-  transform: scale(1);
-}
-
-nav a.active {
-  background: #000;        
-  color: #fff;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-}
-
+    nav a {
+      text-decoration: none;
+      color: #111;
+      padding: 8px 14px;
+      transition: background-color 0.18s ease, color 0.18s ease, transform 0.08s ease;
+      cursor: pointer;
+      border-radius: 5px;     
+      background: transparent; 
+      display: inline-block;
+      border: 1px solid transparent;
+      font-weight: 600;
+    }
+    
+    nav a:hover {
+      background: #111;        
+      color: #fff;
+      transform: scale(1);
+    }
+    
+    nav a.active {
+      background: #000;        
+      color: #fff;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    }
+    
     main {
       margin-top: 80px;
     }
@@ -123,6 +123,15 @@ nav a.active {
 
     .category-card:hover {
       background-color: #c0c0c0;
+    }
+
+    .category-card.active {
+      background-color: #111;
+      color: #fff;
+    }
+
+    .category-card.active span {
+      color: #fff;
     }
 
     .category-card span {
@@ -178,7 +187,6 @@ nav a.active {
       color: #000;
     }
 
-    /* Footer Section */
     .footer-content {
       padding: 60px 40px;
       background-color: #fafafa;
@@ -494,4 +502,9 @@ nav a.active {
 
 .socialcontainer:hover .social-icon-4 {
   transform: translateY(-70px);
+}
+
+.contact-item-icon {
+  width: 35px;
+  height: 35px;
 }

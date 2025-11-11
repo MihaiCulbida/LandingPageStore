@@ -44,6 +44,34 @@ window.addEventListener('scroll', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
+  const categoryCards = document.querySelectorAll('.category-card');
+  const productCards = document.querySelectorAll('.product-card');
+
+  categoryCards.forEach(card => {
+    card.addEventListener('click', () => {
+      const selectedCategory = card.getAttribute('data-category');
+
+      categoryCards.forEach(c => c.classList.remove('active'));
+      card.classList.add('active');
+
+      productCards.forEach(product => {
+        const productCategory = product.getAttribute('data-category');
+        if (productCategory === selectedCategory) {
+          product.style.display = 'block';
+        } else {
+          product.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  const firstCategory = categoryCards[0];
+  if (firstCategory) {
+    firstCategory.click();
+  }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
   const linkButtons = document.querySelectorAll('.cssbuttons-io-button, .Btn');
 
   linkButtons.forEach(btn => {
