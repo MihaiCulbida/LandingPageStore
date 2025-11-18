@@ -3,26 +3,39 @@ const setActiveButton = (button) => {
   button.classList.add('active');
 };
 
-// La încărcarea paginii
 window.addEventListener('DOMContentLoaded', () => {
+  const currentPage = window.location.pathname.split('/').pop() || 'shop.html';
   const hash = window.location.hash;
-  const targetLink = hash 
-    ? document.querySelector(`a[href="${hash}"]`) 
-    : document.querySelector('a[href="shop.html"]');
+  
+  let targetLink;
+  
+  if ((currentPage === 'shop.html' || currentPage === '' || currentPage === 'index.html') && hash) {
+    targetLink = document.querySelector(`a[href="${hash}"]`);
+  } else {
+    targetLink = document.querySelector(`a[href="${currentPage}"]`);
+  }
+
+  if (!targetLink && (currentPage === 'shop.html' || currentPage === '' || currentPage === 'index.html')) {
+    targetLink = document.querySelector('a[href="shop.html"]') || document.querySelector('a[href="#home"]');
+  }
   
   if (targetLink) setActiveButton(targetLink);
 });
 
-// La click pe butoane
 document.querySelectorAll('.nav-link').forEach(link => {
   link.addEventListener('click', function() {
     setActiveButton(this);
   });
 });
 
-// La scroll, detectează secțiunea
 let scrollTimeout;
 window.addEventListener('scroll', () => {
+  const currentPage = window.location.pathname.split('/').pop() || 'shop.html';
+  
+  if (currentPage !== 'shop.html' && currentPage !== '' && currentPage !== 'index.html') {
+    return;
+  }
+  
   clearTimeout(scrollTimeout);
   scrollTimeout = setTimeout(() => {
     const sections = document.querySelectorAll('section[id]');
@@ -37,7 +50,7 @@ window.addEventListener('scroll', () => {
     
     const activeLink = current 
       ? document.querySelector(`a[href="#${current}"]`)
-      : window.pageYOffset < 100 ? document.querySelector('a[href="shop.html"]') : null;
+      : window.pageYOffset < 100 ? document.querySelector('a[href="shop.html"]') || document.querySelector('a[href="#home"]') : null;
     
     if (activeLink) setActiveButton(activeLink);
   }, 100);

@@ -4,17 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PageForge - Landing Page Marketplace</title>
+    <link rel="icon" href="logotip.png" type="image/x-icon" class="logo">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <header>
+  <header id="header">
     <div class="logo">
-       <img src="images/logo.png" class="logo-img" alt="PageForge logo">
-       <h2 class="site-title">PageForge</h2>
+      <div class="logo-img">PF</div>
+      <h2 class="site-title">PageForge</h2>
     </div>
     <nav>
       <ul>
-        <li><a class="nav-link" href="#home">Home</a></li>
+        <li><a class="nav-link active" href="#home">Home</a></li>
         <li><a class="nav-link" href="#categories">Categories</a></li>
         <li><a class="nav-link" href="about.html">About us</a></li>
         <li><a class="nav-link" href="contacts.html">Contacts</a></li>
@@ -24,12 +25,18 @@
 
   <main>
     <section id="home" class="hero">
-      <img src="images/pets.webp" alt="Hero Image">
+      <div class="hero-content">
+        <h1>Creează pagini web extraordinare</h1>
+        <p>Landing pages moderne, rapide și optimizate pentru conversii. Perfecte pentru afacerea ta.</p>
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80" alt="Hero" class="hero-image">
+      </div>
     </section>
 
     <section id="categories" class="categories-section">
+      <h2 class="section-title"> Categorii</h2>
+      
       <div class="category-icons">
-        <div class="category-card" data-category="1">
+        <div class="category-card active" data-category="1">
           <span>Categorie 1</span>
         </div>
         <div class="category-card" data-category="2">
@@ -42,7 +49,7 @@
 
       <div class="products-grid">
         <div class="product-card" data-category="1">
-          <img src="images/img5.png" class="product-image">
+          <img src="img5.png" class="product-image">
           <div class="product-info">
             <h3>Product</h3>
             <p>Description of first product</p>
@@ -51,7 +58,7 @@
         </div>
 
         <div class="product-card" data-category="1">
-         <img src="images/img4.png" class="product-image">
+         <img src="img2.png" class="product-image">
           <div class="product-info">
             <h3>Product</h3>
             <p>Description of second product</p>
@@ -60,7 +67,7 @@
         </div>
 
         <div class="product-card" data-category="1">
-         <img src="images/img7.png" class="product-image">
+         <img src="img7.png" class="product-image">
           <div class="product-info">
             <h3>Product</h3>
             <p>Description of third product</p>
@@ -69,7 +76,7 @@
         </div>
 
         <div class="product-card" data-category="2">
-          <img src="images/img6.png" class="product-image">
+          <img src="img6.png" class="product-image">
           <div class="product-info">
             <h3>Product</h3>
             <p>Description of fourth product</p>
@@ -78,7 +85,7 @@
         </div>
 
         <div class="product-card" data-category="2">
-          <img src="images/img2.png" class="product-image">
+          <img src="img4.png" class="product-image">
           <div class="product-info">
             <h3>Product</h3>
             <p>Description of fifth product</p>
@@ -87,7 +94,7 @@
         </div>
 
         <div class="product-card" data-category="2">
-          <img src="images/img1.png" class="product-image">
+          <img src="img1.png" class="product-image">
           <div class="product-info">
             <h3>Product</h3>
             <p>Description of sixth product</p>
@@ -96,7 +103,7 @@
         </div>
 
         <div class="product-card" data-category="3">
-          <img src="images/img3.png" class="product-image">
+          <img src="img3.png" class="product-image">
           <div class="product-info">
             <h3>Product</h3>
             <p>Description of seventh product</p>
@@ -105,7 +112,7 @@
         </div>
 
         <div class="product-card" data-category="3">
-          <img src="images/img8.png" class="product-image">
+          <img src="img8.png" class="product-image">
           <div class="product-info">
             <h3>Product</h3>
             <p>Description of eighth product</p>
@@ -113,10 +120,9 @@
           </div>
         </div>
       </div>
-  </section>
 
-    <div class="footer-content">
-      <div class="features-grid">
+      <div class="footer-content">
+        <div class="features-grid">
         <div class="feature-item">
           <div class="feature-content">
             <h3>Construim pagini care convertesc</h3>
@@ -143,6 +149,7 @@
         </div>
       </div>
     </div>
+    </section>
 
     <footer>
       <div class="footer-grid">
