@@ -1024,3 +1024,21 @@
       color: #667eea;
       padding-left: 5px;
     }
+
+    .category-img {
+      width: 60px;
+      height: 60px;
+      filter: invert(1);
+    }
+
+    .category-card img {
+      filter: invert(0)
+    }
+
+    .category-card.active img {
+      filter: invert(1)
+    }
+
+    .category-card:hover img {
+      filter: invert(1);
+    }
