@@ -1042,3 +1042,408 @@
     .category-card:hover img {
       filter: invert(1);
     }
+
+    @media (max-width: 768px) {
+   header {
+    flex-direction: column;
+    padding: 0.8rem 3%;
+    gap: 0.8rem;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+    gap: 0.6rem;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .logo-img {
+    width: 38px;
+    height: 38px;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  nav ul {
+    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  nav a {
+    padding: 0.4rem 0.7rem;
+    font-size: 0.8rem;
+  }
+
+  nav a::before {
+    height: 2px;
+  }
+
+  main {
+    margin-top: 110px;
+  }
+
+  .about-hero,
+  .contact-hero {
+    margin-top: 110px;
+  }
+
+  .hero {
+    padding: 3rem 3% 2rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-image {
+    max-width: 100%;
+    margin: 2rem auto;
+    border-radius: 15px;
+  }
+
+  .about-hero {
+    padding: 5rem 3% 3rem;
+  }
+
+  .about-hero h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .about-hero p {
+    font-size: 1rem;
+  }
+
+  .contact-hero {
+    padding: 5rem 3% 3rem;
+  }
+
+  .contact-hero h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .contact-hero p {
+    font-size: 1rem;
+  }
+
+  .categories-section {
+    padding: 3rem 3%;
+  }
+
+  .categories-section::before {
+    height: 70px;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+    padding-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .category-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-bottom: 2.5rem;
+    overflow-x: auto;
+    padding: 0.5rem 0;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; 
+  }
+
+  .category-icons::-webkit-scrollbar {
+    display: none;
+  }
+
+  .category-card {
+    padding: 1rem 1.2rem;
+    min-width: 100px;
+    max-width: 110px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .category-card span {
+    font-size: 0.85rem;
+    text-align: center;
+  }
+
+  .category-img {
+    width: 35px;
+    height: 35px;
+    margin: 0 auto 0.5rem;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .product-card {
+    max-width: 100%;
+  }
+
+  .product-image {
+    height: 180px;
+  }
+
+  .product-info {
+    padding: 1.2rem;
+  }
+
+  .product-info h3 {
+    font-size: 1rem;
+  }
+
+  .product-info p {
+    font-size: 0.85rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .feature-item {
+    padding: 1.5rem;
+  }
+
+  .feature-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .feature-content p {
+    font-size: 0.9rem;
+  }
+
+  .about-content {
+    padding: 4rem 3%;
+  }
+
+  .about-section {
+    margin-bottom: 3rem;
+  }
+
+  .about-card {
+    padding: 2rem;
+  }
+
+  .about-card h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .about-card p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+
+  .about-features {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin: 2.5rem 0;
+  }
+
+  .feature-box {
+    padding: 1.8rem;
+  }
+
+  .feature-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .feature-box h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .feature-box p {
+    font-size: 0.9rem;
+  }
+
+  .mission-statement {
+    padding: 2rem;
+    margin-top: 3rem;
+  }
+
+  .mission-statement h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .mission-statement p {
+    font-size: 1rem;
+  }
+
+  .contact-content {
+    padding: 4rem 3%;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .contact-form-container {
+    padding: 2rem;
+  }
+
+  .contact-form-container h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .form-group label {
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 0.8rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 10px;
+  }
+
+  .form-group textarea {
+    min-height: 120px;
+  }
+
+  .submit-btn {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  .contact-info-side {
+    gap: 1.5rem;
+  }
+
+  .info-card {
+    padding: 1.8rem;
+  }
+
+  .info-card-icon {
+    width: 55px;
+    height: 55px;
+    margin-bottom: 1rem;
+  }
+
+  .info-card-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .info-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .info-card p {
+    font-size: 0.95rem;
+  }
+
+  .additional-info {
+    padding: 2rem;
+    margin-top: 3rem;
+  }
+
+  .additional-info h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .additional-info p {
+    font-size: 0.95rem;
+  }
+
+  footer {
+    padding: 2rem 2.5%;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 1rem;
+    max-width: 100%;
+  }
+
+  .footer-brand h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .social-login-icons {
+    gap: 5px;
+    -webkit-box-reflect: below 3px linear-gradient(transparent, #00000055);
+  }
+
+  .social-login-icons svg {
+    width: 30px;
+  }
+
+  .social-icon-1,
+  .social-icon-1-1,
+  .social-icon-2,
+  .social-icon-2-2,
+  .social-icon-3,
+  .social-icon-3-3,
+  .social-icon-4,
+  .social-icon-4-4 {
+    width: 38px;
+    height: 38px;
+    margin: 10px 0 0 0;
+  }
+
+  .socialcontainer {
+    height: 60px;
+  }
+
+  .socialcontainer:hover .social-icon-1,
+  .socialcontainer:hover .social-icon-2,
+  .socialcontainer:hover .social-icon-3,
+  .socialcontainer:hover .social-icon-4 {
+    transform: translateY(-52px);
+  }
+
+  .footer-column h4 {
+    font-size: 0.8rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .footer-column ul li {
+    margin-bottom: 0.4rem;
+  }
+
+  .footer-column ul li a {
+    font-size: 0.7rem;
+  }
+
+  .footer-column ul li a:hover {
+    padding-left: 3px;
+  }
+}
